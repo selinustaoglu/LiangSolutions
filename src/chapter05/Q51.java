@@ -20,7 +20,7 @@ public class Q51 {
 			index++;
 		}
 
-		if (prefix.length() > 0)
+		if (prefix.length() >= 2)
 			System.out.println("The commmon prefix is " + prefix);
 		else
 			System.out.println(string1 + " and " + string2 + " have no commmon prefix");

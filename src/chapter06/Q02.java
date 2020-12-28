@@ -8,10 +8,11 @@ public class Q02 {
 		
 		while(number != 0) {
 			sum += number % 10;
-			number = (int) number / 10;
+			number /= 10;
 		}
 		return sum;
 	}
+	
 	public static void main(String[] args) {
 		System.out.println(sumDigits(12345678));
 	}

@@ -11,9 +11,9 @@ public class Q46 {
 		String word = input.next();
 		int length = word.length();
 		
-		for (int i = length; i > 0; i--) {
+		for (int i = length - 1; i >= 0; i--) {
 			
-			System.out.print(word.substring(i - 1, i));
+			System.out.print(word.charAt(i));
 			
 		}
 	}

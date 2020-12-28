@@ -26,7 +26,7 @@ public class Q47 {
 		
 		sum = 10 - (sum % 10);
 		
-		if(sum == 0) {
+		if(sum == 10) {
 			System.out.println(isbn + "0");
 		}else
 			System.out.println(isbn + sum);

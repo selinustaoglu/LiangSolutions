@@ -8,12 +8,12 @@ public class Q48 {
 		Scanner input = new Scanner(System.in);
 		
 		System.out.print("Enter a string: ");
-		String word = input.next();
+		String word = input.nextLine();
 		
-		for (int i = 1; i <= word.length(); i++) {
+		for (int i = 0; i < word.length() - 1; i++) {
 			
-			if(i % 2 != 0)
-				System.out.print(word.substring(i-1, i));
+			if(i % 2 == 0)
+				System.out.print(word.charAt(i));
 		}
 	}
 
