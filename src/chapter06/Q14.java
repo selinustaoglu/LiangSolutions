@@ -12,7 +12,8 @@ public class Q14 {
 
 	public static void main(String[] args) {
 
-		System.out.println("i             pi\n" + "----------------");
+		System.out.println("i             pi");
+		System.out.println("----------------");
 
 		for (double i = 1; i < 902; i += 100) {
 			System.out.printf("%-12.0f", i);

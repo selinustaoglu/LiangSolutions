@@ -1,42 +1,37 @@
 package chapter06;
 
 public class Q18 {
-	
-	public static void passwordChecker(String password) {
-		boolean atLeast8Digits = false;
-		boolean atLeast2isDigits = false;
-		boolean lettersAndDigits = true;
+
+	public static boolean isPpasswordValid(String password) {
 		int count = 0;
-		
-		if(password.length() >= 8)
-			atLeast8Digits = true;
-		
+
+		if (password.length() < 8)
+			return false;
+
 		for (int i = 0; i < password.length(); i++) {
-			if(! ( (Character.isDigit(password.charAt(i))) ||   (Character.isLetter(password.charAt(i)))    ) ) {
-				lettersAndDigits = false;
-				continue;
+			if (!((Character.isDigit(password.charAt(i))) || (Character.isLetter(password.charAt(i))))) {
+				return false;
 			}
 		}
-		
+
 		for (int i = 0; i < password.length(); i++) {
-			if ( Character.isDigit(password.charAt(i)) ) {
-				count ++;
+			if (Character.isDigit(password.charAt(i))) {
+				count++;
 			}
-		}	
-		
-		if(count >= 2)
-			atLeast2isDigits = true;
-		
-		
-		if(atLeast2isDigits && atLeast8Digits && lettersAndDigits)
-			System.out.print("Valid Password");
-		else
-			System.out.println("Invalid Password");
-		
+		}
+
+		if (count < 2)
+			return false;
+
+		return true;
 	}
 
 	public static void main(String[] args) {
-		passwordChecker("1abyedr");
+
+		if (isPpasswordValid("1abyedr"))
+			System.out.print("Valid Password");
+		else
+			System.out.println("Invalid Password");
 
 	}
 

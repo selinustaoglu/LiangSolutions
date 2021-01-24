@@ -1,7 +1,5 @@
 package chapter06;
 
-import java.util.Scanner;
-
 public class Q17 {
 	
 	public static void printMatrix(int n) {

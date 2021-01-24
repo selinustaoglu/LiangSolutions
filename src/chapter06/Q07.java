@@ -12,9 +12,9 @@ public class Q07 {
 	}
 
 	public static void main(String[] args) {
-		System.out.printf("%.3f",futureInvestmentValue(10000, 0.05/12, 5));
-		
-		//Test Program
+		// System.out.printf("%.3f", futureInvestmentValue(10000, 0.05 / 12, 5));
+
+		// Test Program
 		Scanner input = new Scanner(System.in);
 		final int YEARS = 30;
 

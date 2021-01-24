@@ -15,7 +15,7 @@ public class Q12 {
 	}
 
 	public static void main(String[] args) {
-		printChars('A','K',5);
+		printChars('A', 'K', 5);
 	}
 
 }
