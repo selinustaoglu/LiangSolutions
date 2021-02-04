@@ -41,9 +41,18 @@ public class Q30 {
 	}
 
 	public static void rollTillWinOrLose(int point) {
-		int result;
+		int result = 0;
 
-		\\yapilacak
+		result = rollDiceTwice();
+		
+		while(result != 7 && point != result) {
+			if (result == 7)
+				printResult(0);
+			else
+				printResult(1);
+			
+			result = rollDiceTwice();
+		}
 	}
 
 	public static void main(String[] args) {
@@ -54,7 +63,6 @@ public class Q30 {
 		if (isCrapsOrNatural(result))
 			printResult(result);
 		else {
-			// Continue to roll dice till you win or lose
 			rollTillWinOrLose(result);
 		}
 	}
