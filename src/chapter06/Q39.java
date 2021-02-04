@@ -51,6 +51,7 @@ public class Q39 {
 			System.out.print("same line ");
 		else
 			System.out.print("right side of the line");
+		
 		System.out.println("from " + "(" + x0 + ", " + y0 + ") to (" + x1 + ", " + y1 + ")");
 	}
 

@@ -10,7 +10,7 @@ public class Q25 {
 		System.out.print("Enter milliseconds: ");
 		long milliseconds = input.nextLong();
 
-		System.out.println("hours:minuties:seconds: " + convertMillis(milliseconds));
+		System.out.println("hours:minutes:seconds: " + convertMillis(milliseconds));
 
 	}
  

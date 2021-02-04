@@ -19,7 +19,7 @@ public class Q08 {
 				System.out.printf("%-11.1f", celsius);
 				System.out.printf("%-14.1f|", celsiusToFahrenheit(celsius));
 				System.out.printf("     %-14.1f", fahrenheit);
-				System.out.printf("%-6.2f\n\n", fahrenheitToCelsius(fahrenheit));
+				System.out.printf("%-6.2f\n", fahrenheitToCelsius(fahrenheit));
 	}
 
 }

@@ -18,13 +18,9 @@ public class Q30 {
 		switch (point) {
 		case 2:
 		case 3:
-		case 12:
-			point = 0;
-			break;
+		case 12:point = 0;break;
 		case 7:
-		case 11:
-			point = 1;
-			break;
+		case 11:point = 1;break;
 		}
 		return point;
 	}
@@ -46,13 +42,13 @@ public class Q30 {
 		result = rollDiceTwice();
 		
 		while(result != 7 && point != result) {
-			if (result == 7)
-				printResult(0);
-			else
-				printResult(1);
-			
 			result = rollDiceTwice();
 		}
+		
+		if (result == 7)
+			printResult(0);
+		else
+			printResult(1);
 	}
 
 	public static void main(String[] args) {
