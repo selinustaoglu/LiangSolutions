@@ -50,7 +50,7 @@ public class Q34 {
 				System.out.println(". You lose");
 				computerWins++;
 			}
-		} while (computerWins - youWin <= 2 || youWin - computerWins <= 2);
+		} while (Math.abs(computerWins - youWin) <= 2);
 		
 		System.out.println("Your score is " + youWin);
 		System.out.println("The computer's score is " + computerWins);

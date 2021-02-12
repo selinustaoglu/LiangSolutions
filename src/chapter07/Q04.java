@@ -30,16 +30,14 @@ public class Q04 {
 	}
 	
 	public static void computeStatistics(int[] array) {
-		int i = 0;
 		int above = 0;
 		int below = 0;
 		int average = computeAverage(array);
-		while (array[i] >= 0) {
+		for (int i = 0; i < array.length; i++) {
 			if(array[i] >= average)
 				above++;
 			else
 				below++;
-			i++;
 		}
 		System.out.println(above + " grades are equal to or above the average");
 		System.out.print(below + " grades are below the average");

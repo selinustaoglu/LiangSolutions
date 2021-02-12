@@ -6,65 +6,57 @@ public class Q30 {
 		return (int) (1 + Math.random() * 6);
 	}
 
-	public static int rollDiceTwice() {
+	public static int rollDiceTwice(boolean print) {
 		int dice1 = rollDice();
 		int dice2 = rollDice();
 		int sum = dice1 + dice2;
-		System.out.println("You rolled " + dice1 + " + " + dice2 + " = " + sum);
+		if (print)
+			System.out.println("You rolled " + dice1 + " + " + dice2 + " = " + sum);
 		return sum;
 	}
 
-	public static int getresult(int point) {
-		switch (point) {
-		case 2:
-		case 3:
-		case 12:point = 0;break;
-		case 7:
-		case 11:point = 1;break;
-		}
-		return point;
+	public static boolean isCraps(int point) {
+		return point == 2 || point == 3 || point == 12;
 	}
 
-	public static boolean isCrapsOrNatural(int result) {
-		return result == 0 || result == 1;
+	public static boolean isNatural(int point) {
+		return point == 7 || point == 11;
 	}
 
-	public static void printResult(int result) {
-		if (result == 0)
-			System.out.println("You lose");
-		else if (result == 1)
+	public static void printResult(boolean win) {
+		if (win)
 			System.out.println("You win");
-	}
-
-	public static void rollTillWinOrLose(int point) {
-		int result = 0;
-
-		result = rollDiceTwice();
-		
-		while(result != 7 && point != result) {
-			result = rollDiceTwice();
-		}
-		
-		if (result == 7)
-			printResult(0);
 		else
-			printResult(1);
+			System.out.println("You lose");
 	}
-	
-	public static int playCraps() {
-		int point = rollDiceTwice();
 
-		int result = getresult(point);
+	public static boolean rollTillWinOrLose(int point, boolean print) {
+		int newPoint = rollDiceTwice(print);
 
-		if (isCrapsOrNatural(result))
-			printResult(result);
-		else {
-			rollTillWinOrLose(result);
-	}
-		return result;
-	}
-	public static void main(String[] args) {
-			playCraps();
+		while (newPoint != 7 && point != newPoint) {
+			newPoint = rollDiceTwice(print);
 		}
-	
+		return newPoint == point;
+	}
+
+	public static boolean playCraps(boolean print) {
+		int point = rollDiceTwice(print);
+
+		boolean win;
+		if (isNatural(point)) {
+			win = true;
+		} else if (isCraps(point)) {
+			win = false;
+		} else {
+			win = rollTillWinOrLose(point, print);
+		}
+		if (print)
+			printResult(win);
+		return win;
+	}
+
+	public static void main(String[] args) {
+		playCraps(true);
+	}
+
 }

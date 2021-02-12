@@ -16,7 +16,7 @@ public class Q02 {
 			numbers[i] = input.nextInt();
 		}
 		
-		for (int i = 9; i < numbers.length && i >= 0; i--) {
+		for (int i = 9; i >= 0; i--) {
 			System.out.print(numbers[i] + " ");
 		}
 	}

@@ -28,7 +28,6 @@ public class Q03 {
 		for (int i = 0; i < numbers.length; i++) {
 			if (numbers[i] == 1)
 				System.out.println(i + " occurs " + numbers[i] + " time");
-
 			else if (numbers[i] > 1)
 				System.out.println(i + " occurs " + numbers[i] + " times");
 

@@ -41,7 +41,7 @@ public class Q01 {
 		int length = input.nextInt();
 		int[] scores = new int[length];
 
-		System.out.print("Enter 4 scores: ");
+		System.out.print("Enter " + length + " scores: ");
 
 		for (int i = 0; i < scores.length; i++) {
 			scores[i] = input.nextInt();

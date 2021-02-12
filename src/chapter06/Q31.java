@@ -19,7 +19,7 @@ public class Q31 {
 	}
 
 	public static boolean isValid(long number) {
-		if (!prefixMatched(number, 4) || !prefixMatched(number, 5) || !prefixMatched(number, 6) || !prefixMatched(number, 37)) {
+		if (!prefixMatched(number, 4) && !prefixMatched(number, 5) && !prefixMatched(number, 6) && !prefixMatched(number, 37)) {
 			return false;
 		}
 
@@ -34,7 +34,7 @@ public class Q31 {
 	public static int sumOfDoubleEvenPlace(long number) {
 		int sum = 0;
 		String num = number + "";
-		for (int i = 0; i <= getSize(number); i += 2) {
+		for (int i = 0; i < getSize(number); i += 2) {
 			sum += getDigit(Integer.parseInt(num.charAt(i) + "") * 2);
 		}
 		return sum;
