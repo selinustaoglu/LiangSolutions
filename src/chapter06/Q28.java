@@ -11,7 +11,7 @@ public class Q28 {
 		System.out.println("--------------------");
 
 		for (int i = 2; i <= 31; i++) {
-			if (Q10.isPrime(i)) {
+			if (Chapter06Util.isPrime(i)) {
 				System.out.printf("%-13d", i);
 				System.out.println(mersennePrime(i));
 			}

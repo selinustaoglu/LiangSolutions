@@ -7,7 +7,7 @@ public class Q26 {
 		
 		int number = 2;
 		while (true) {
-			if(Q10.isPrime(number) && Q03.isPalindrome(number)) {
+			if(Chapter06Util.isPrime(number) && Q03.isPalindrome(number)) {
 				System.out.printf("%6d", number);
 				count++;
 

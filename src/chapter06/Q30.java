@@ -50,8 +50,8 @@ public class Q30 {
 		else
 			printResult(1);
 	}
-
-	public static void main(String[] args) {
+	
+	public static int playCraps() {
 		int point = rollDiceTwice();
 
 		int result = getresult(point);
@@ -60,6 +60,11 @@ public class Q30 {
 			printResult(result);
 		else {
 			rollTillWinOrLose(result);
-		}
 	}
+		return result;
+	}
+	public static void main(String[] args) {
+			playCraps();
+		}
+	
 }

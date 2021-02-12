@@ -4,7 +4,7 @@ public class Q27 {
 //satirlarin arasinda araliklar var
 	public static boolean emirp(int number) {
 
-		if (!Q10.isPrime(number))
+		if (!Chapter06Util.isPrime(number))
 			return false;
 
 		int reversed = reverse(number);
@@ -12,7 +12,7 @@ public class Q27 {
 		if (number == reversed)
 			return false;
 
-		if (!Q10.isPrime(reversed))
+		if (!Chapter06Util.isPrime(reversed))
 			return false;
 
 		return true;
