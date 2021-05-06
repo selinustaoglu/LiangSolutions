@@ -103,7 +103,6 @@ public class Q34 {
 		System.out.println();
 	}
 
-	/** Get the start day of month/1/year */
 	public static int getStartDay(int dayOfMonth, int year, int month) {
 		if (month == 1 || month == 2) {
 			month = month + 12;
@@ -153,5 +152,33 @@ public class Q34 {
 	/** Determine if it is a leap year */
 	public static boolean isLeapYear(int year) {
 		return year % 400 == 0 || (year % 4 == 0 && year % 100 != 0);
+	}
+	
+	public static int getLastDay(int month, int year) {
+		int lastDayOfMonth;
+		if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
+			lastDayOfMonth = 31;
+		} else if (month == 2) {
+			if (isLeapYear(year)) {
+				lastDayOfMonth = 29;
+			} else {
+				lastDayOfMonth = 28;
+			}
+		} else {
+			lastDayOfMonth = 30;
+		}
+		return lastDayOfMonth;
+	}
+	
+	public static void printCalendarItself(int month, int year) {
+		int lastDayOfMonth = getLastDay(month, year);
+
+		for (int i = 2; i <= lastDayOfMonth; i++) {
+			int printedDay = getStartDay(i, month, year);
+			if (printedDay == 1) {
+				System.out.println();
+			}
+			System.out.print(i + "\t");
+		}
 	}
 }

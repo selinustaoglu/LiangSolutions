@@ -7,18 +7,14 @@ public class Q23 {//TODO
 		boolean[] lockers = new boolean[100];
 		
 		for (int i = 1; i <= 100; i++) {
-			for (int j = 0; j < lockers.length; j=j+i) {
-				if(lockers[j] == false) {
-					lockers[j]=true;
-				}else {
-					lockers[j]=false;
-				}
+			for (int j = i - 1; j < lockers.length; j += i) {
+				lockers[j] = !lockers[j];
 			}
 		}
 		
 		for (int i = 0; i < lockers.length; i++) {
 			if(lockers[i] == true) {
-				System.out.print(" " + i);
+				System.out.print(" " + (i + 1));
 			}
 		}
 

@@ -1,6 +1,6 @@
 package chapter07;
 
-public class Q24 {
+public class Q24 {//TODO
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
