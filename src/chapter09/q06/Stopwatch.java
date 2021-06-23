@@ -5,24 +5,24 @@ import java.lang.*;
 public class Stopwatch {
 	
 	//data-fields
-	double startTime;
-	double endTime;
+	private double startTime;
+	private double endTime;
 	
 	//no-arg constructor
-	Stopwatch(){
+	public Stopwatch(){
 		startTime = System.currentTimeMillis();
 	}
 	
 	//methods
-	void start() {
+	public void start() {
 		startTime = System.currentTimeMillis();
 	}
 	
-	void stop() {
+	public void stop() {
 		endTime = System.currentTimeMillis();
 	}
 	
-	double getElapsedTime() {
+	public double getElapsedTime() {
 		return endTime - startTime;
 	}
 }

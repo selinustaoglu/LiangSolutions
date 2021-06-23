@@ -1,63 +1,59 @@
 package chapter09.q08;
 
 public class Fan {
-	private static final int SLOW = 1;
-	private static final int MEDIUM = 2;
-	private static final int FAST = 3;
+	public static final int SLOW = 1;
+	public static final int MEDIUM = 2;
+	public static final int FAST = 3;
 	
 	// data-fields
-	private int speed;
+	private SpeedType speed;
 	private boolean on;
 	private double radius;
 	private String color;
 
 	// no-arg constructor
-	Fan() {
-		speed = SLOW;
+	public Fan() {
+		speed = SpeedType.SLOW;
 		on = false;
 		radius = 5;
 		color = "blue";
 	}
 
-	// Accessor methods
-
-	int getSpeed() {
-		return speed;
-	}
-
-	boolean getOn() {
+	// methods
+	public boolean isOn() {
 		return on;
 	}
 
-	double getRadius() {
+	public SpeedType getSpeed() {
+		return speed;
+	}
+
+	public void setSpeed(SpeedType speed) {
+		this.speed = speed;
+	}
+
+	public void setOn(boolean on) {
+		this.on = on;
+	}
+
+	public double getRadius() {
 		return radius;
 	}
 
-	String getColor() {
+	public void setRadius(double radius) {
+		this.radius = radius;
+	}
+
+	public String getColor() {
 		return color;
 	}
 
-	// Mutator methods
-	void setSpeed(int newSpeed) {
-		speed = newSpeed;
+	public void setColor(String color) {
+		this.color = color;
 	}
-
-	void setOn(boolean newSetting) {
-		on = newSetting;
-	}
-
-	void setRadius(double newRadius) {
-		radius = newRadius;
-	}
-
-	void setColor(String newColor) {
-		color = newColor;
-	}
-
-	// methods
 
 	public String toString() {
-		if (getOn()) {
+		if (isOn()) {
 			return "speed: " + getSpeed() + " color: " + getColor() + " radius: " + getRadius();
 		} else {
 			return" color: " + getColor() + " radius: " + getRadius() + " fan is off.";

@@ -1,6 +1,6 @@
 package chapter09.q09;
 
-public class test {
+public class Test {
 
 	public static void main(String[] args) {
 		

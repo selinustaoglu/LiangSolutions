@@ -3,78 +3,72 @@ package chapter09.q07;
 import java.util.Date;
 
 public class Account {
-	
 	//data-fields
-	int id;
-	double balance;
-	double annualInterestRate;
+	private int id;
+	private double balance;
+	private double annualInterestRate;
 	private Date dateCreated;
 	
 	//no-arg constructor
-	Account(){
-		id = 0;
-		balance = 0;
-		annualInterestRate = 0;
-		dateCreated = new Date();
+	public Account(){
+		this(0, 0);
+		this.annualInterestRate = 0;
 	}
 	
-	Account(int newId, double newBalance, double newInterest){
-		id = newId;
-		balance = newBalance;
-		annualInterestRate = newInterest;
-		dateCreated = new Date();
+	public Account(int id, double balance) {
+		this.id = id;
+		this.balance = balance;
+		this.dateCreated = new Date();
 	}
-	
-	//Accessor methods
-	double getId() {
-		return id;
-	}
-	
-	double getBalance() {
-		return balance;
-	}
-	
-	double getAnnualInterestRate() {
-		return annualInterestRate;
-	}
-	
-	String getDateCreated() {
-		return dateCreated.toString();
-	}
-	
-	//mutator methods
-	public void setId(int newId) {
-		id = newId;
-	}
-	
-	public void setBalance(int newBalance) {
-		balance = newBalance;
-	}
-	
-	public void setAnnualInterestRate(int newInterest) {
-		annualInterestRate = newInterest;
-	}
-	
-	Date getDate() {
-		return dateCreated;
-	}
-	
+
 	//METHODS
-	
-	double getMonthlyInterestRate() {
-		return annualInterestRate / 12;
+	public double getMonthlyInterestRate() {
+		return annualInterestRate / 1200;
 	}
 	
-	double getMonthlyInterest() {
-		return balance * (getMonthlyInterestRate() / 100);
+	public double getMonthlyInterest() {
+		return balance * getMonthlyInterestRate();
 	}
 	
-	void withdraw(int amount) {
+	public void withdraw(int amount) {
 		balance -= amount;
 	}
 	
-	void deposit(int amount) {
+	public void deposit(int amount) {
 		balance += amount;
 	}
 
+	// getters and setters
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+
+	public double getAnnualInterestRate() {
+		return annualInterestRate;
+	}
+
+	public void setAnnualInterestRate(double annualInterestRate) {
+		this.annualInterestRate = annualInterestRate;
+	}
+
+	public Date getDateCreated() {
+		return dateCreated;
+	}
+
+	public void setDateCreated(Date dateCreated) {
+		this.dateCreated = dateCreated;
+	}
+	
 }

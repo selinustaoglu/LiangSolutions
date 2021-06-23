@@ -1,6 +1,6 @@
 package chapter09.q06;
 
-public abstract class test {
+public abstract class Test {
 
 	public static void main(String[] args) {
 		
