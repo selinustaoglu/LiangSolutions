@@ -13,10 +13,18 @@ public class Fan {
 
 	// no-arg constructor
 	public Fan() {
-		speed = SpeedType.SLOW;
-		on = false;
-		radius = 5;
-		color = "blue";
+		this(SpeedType.SLOW);
+	}
+	
+	public Fan(SpeedType speed) {
+		this(speed, false, 5, "blue");
+	}
+
+	public Fan(SpeedType speed, boolean on, double radius, String color) {
+		this.speed = speed;
+		this.on = on;
+		this.radius = radius;
+		this.color = color;
 	}
 
 	// methods
